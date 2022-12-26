@@ -10,3 +10,7 @@ type UseCase interface {
 type useCase struct {
 	repo repo.Repo
 }
+
+func New(repo repo.Repo) *useCase {
+	return &useCase{repo: repo}
+}
