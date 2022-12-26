@@ -1,7 +1,7 @@
 package usecase
 
 import (
-	"github.com/yoteerakrit/assessment/repo"
+	"github.com/yoteerakrit/assessment/repo.go"
 )
 
 type UseCase interface {
