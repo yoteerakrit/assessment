@@ -10,15 +10,14 @@ import (
 
 func NewPostgreSQL() *gorm.DB {
 	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%d sslmode=disable TimeZone=Asia/Bangkok",
-		"localhost",
+		"0.0.0.0",
 		"root",
-		"keep1234",
-		"keeplearning",
-		3306,
+		"expense",
+		"temp",
+		5455,
 	)
 
-	//"user=gorm password=gorm dbname=gorm port=9920 sslmode=disable TimeZone=Asia/Shanghai",
-	//"user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local"
+	//docker run --name assessment -e POSTGRES_USER=root -e POSTGRES_PASSWORD=expense -e POSTGRES_DB=temp -p 5455:5432 -d postgres
 
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {

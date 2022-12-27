@@ -11,6 +11,6 @@ type ExpenseRepo struct {
 	db *gorm.DB
 }
 
-func NewRepo(db *gorm.DB) *ExpenseRepo {
+func New(db *gorm.DB) *ExpenseRepo {
 	return &ExpenseRepo{db: db}
 }
